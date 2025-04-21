@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ordena tu Menú - Pollo Campero</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #fff;
+    }
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #f68f1e;
+    }
+    h2 {
+      font-size: 24px;
+      color: #f68f1e;
+      margin-top: 30px;
+    }
+    label {
+      font-size: 18px;
+      display: block;
+      margin: 5px 0;
+      font-weight: bold;
+    }
+    input[type="submit"] {
+      margin-top: 30px;
+      padding: 12px 28px;
+      background-color: #f68f1e;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #d97617;
+    }
+    input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-right: 10px;
+    }
+    a {
+      display: block;
+      margin-top: 30px;
+      font-size: 18px;
+      color: #f68f1e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Menú Pollo Campero</h1>
+
+  <form action="#" method="post">
+    
+    <h2>Piezas de Pollo</h2>
+    <label><input type="checkbox" name="orden" value="2 piezas">2 Piezas de Pollo Frito - Q15.00</label>
+    <label><input type="checkbox" name="orden" value="4 piezas">4 Piezas de Pollo Frito - Q20.00</label>
+    <label><input type="checkbox" name="orden" value="6 piezas">6 Piezas de Pollo Frito - Q25.00</label>
+    
+    <h2>Combos</h2>
+    <label><input type="checkbox" name="orden" value="combo1">Combo 1: 2 piezas + acompañamiento - Q10.00</label>
+    <label><input type="checkbox" name="orden" value="combo2">Combo 2: 4 piezas + papas y ensalada - Q12.00</label>
+    <label><input type="checkbox" name="orden" value="combo3">Combo 3: 6 piezas + papas y bebida - Q16.00</label>
+    
+    <h2>Acompañamientos</h2>
+    <label><input type="checkbox" name="orden" value="papas">Papas Fritas - Q6.00</label>
+    <label><input type="checkbox" name="orden" value="ensalada">Ensalada - Q3.00</label>
+    
+    <h2>Bebidas</h2>
+    <label><input type="checkbox" name="orden" value="refresco-peq">Refresco (Pequeño) - Q5.00</label>
+    <label><input type="checkbox" name="orden" value="refresco-grande">Refresco (Grande) - Q10.00</label>
+    <label><input type="checkbox" name="orden" value="aguas">Aguas Frescas - Q5.00</label>
+
+    <input type="submit" value="Enviar Orden">
+
+  </form>
+
+  <a href="index.html">Regresar a la Página Principal</a>
+
+</body>
+</html>
+
