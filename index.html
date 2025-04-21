@@ -1,93 +1,154 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Página Responsive con Navbar Centrada</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-    }
+        body {
+            background-image: url(ciudad.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+        }
 
-    header.navbar {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #333;
-      padding: 20px;
-    }
+        /* Configuración para computadora */
+        .barras {
+            display: none;
+        }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: white;
-      font-size: 1.8em;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+        .desplegable {
+            background: #1e1e1e;
+        }
 
-    .logo img {
-      height: 40px;
-    }
+        ul {
+            display: flex;
+            flex-direction: row;
+        }
 
-    nav.nav-links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+        ul li {
+            padding: 10px;
+            list-style: none;
+        }
 
-    nav.nav-links a {
-      color: white;
-      text-decoration: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
+        ul li a {
+            color: cyan;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.1rem;
+        }
 
-    nav.nav-links a:hover {
-      background-color: #555;
-    }
+        nav ul li:hover {
+            background: #f57722;
+        }
 
-    @media (max-width: 768px) {
-      nav.nav-links {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-      }
+        /* Configuración para tablet */
+        @media (max-width: 850px) {
 
-      nav.nav-links a {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
+            .barras {
+                background-color: #1e1e1e;
+                display: block;
+            }
+
+            .desplegable {
+                background: none;
+                transform: translate(-100%);
+                transition: 0.5s;
+                font-size: 1.5rem;
+                width: 50%;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                height: 160vh;
+            }
+
+            a {
+                padding: 0;
+            }
+
+            a {
+                font-size: 1.5rem;
+                padding: 20px 0px 20px 20px;
+                display: block;
+                text-align: left;
+            }
+
+            .boton_menu {
+                background-image: url('./icono_menu.png');
+                background-color: #1e1e1e;
+                background-repeat: no-repeat;
+                height: 30px;
+                width: 30px;
+                background-size: 30px 30px;
+                background-position: center;
+            }
+
+            button {
+                margin: 5px;
+                border: none;
+                margin: 10px 10px 10px 20px;
+            }
+
+            /* Con esta clase abro y cierro el menú con toggle */
+            .abrir_menu {
+                background: rgba(30, 30, 30, 0.6);
+                backdrop-filter: blur(2px);
+                transform: translate(0%);
+                width: 50%;
+                transition: 0.5s;
+            }
+
+            /* Con esta clase cambio las barras por una X */
+            .colocar_x {
+                background-image: url('./icono_x.png');
+                background-color: #1e1e1e;
+                background-repeat: no-repeat;
+                height: 30px;
+                width: 30px;
+                background-size: 30px 30px;
+                background-position: center;
+            }
+        }
+
+        /* Configuración para celular */
+        @media (max-width: 500px) {
+            .desplegable {
+                width: 100%;
+                height: 100vh;
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  <header class="navbar">
-    <div class="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/PolloCampero_Logo.png" alt="Logo">
-      Mi Empresa
+<header>
+    <center>
+        <img src="Pollo.png" width="300" height="180">
+    </center>
+    <div class="barras">
+        <button onclick="abrir_cerrar_menu()" class="boton_menu" id="x"></button>
     </div>
-    <nav class="nav-links">
-      <a href="#">Inicio</a>
-      <a href="#">Ordenar</a>
-      <a href="#">Contactos</a>
-      <a href="#">Empleos</a>
+    <!-- Updated Navigation Menu -->
+    <nav id="menu" class="desplegable">
+        <ul>
+            <li><a href="ace.html">Inicio</a></li>
+            <li><a href="empelo.html">Empleo</a></li>
+            <li><a href="ordenar.html">Ordenar</a></li>
+            <li><a href="contac.html">Contáctanos</a></li>
+        </ul>
     </nav>
-  </header>
-
-  <main style="padding: 20px;">
-    <h1>Bienvenido</h1>
-  </main>
-
+</header>
+<script src="main.js"></script>
 </body>
 </html>
