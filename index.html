@@ -19,18 +19,17 @@
             background-position: center;
             background-size: cover;
             height: 100vh;
-            color: #fff; /* Texto en blanco para mayor contraste */
+            color: #fff; 
             font-family: Arial, sans-serif;
         }
 
-        /* Configuración para computadora */
         .barras {
             display: none;
         }
 
         .desplegable {
             background: #1e1e1e;
-            opacity: 0.9; /* Leve bajo contraste para legibilidad */
+            opacity: 0.9; 
         }
 
         ul {
@@ -58,7 +57,6 @@
             background: #f57722;
         }
 
-        /* Configuración para tablet */
         @media (max-width: 850px) {
             .barras {
                 background-color: #1e1e1e;
@@ -106,7 +104,7 @@
                 margin: 5px;
             }
 
-            /* Con esta clase abro y cierro el menú con toggle */
+    
             .abrir_menu {
                 background: rgba(30, 30, 30, 0.6);
                 backdrop-filter: blur(2px);
@@ -115,7 +113,6 @@
                 transition: 0.5s;
             }
 
-            /* Con esta clase cambio las barras por una X */
             .colocar_x {
                 background-image: url('./icono_x.png');
                 background-color: #1e1e1e;
@@ -126,8 +123,6 @@
                 background-position: center;
             }
         }
-
-        /* Configuración para celular */
         @media (max-width: 500px) {
             .desplegable {
                 width: 100%;
@@ -144,7 +139,7 @@
 <body>
 <header>
     <center>
-        <img src="polloes1.jpg" width="300" height="180" alt="Logo">
+        <img src="Pollo.png" width="300" height="180" alt="Logo">
     </center>
     <div class="barras">
         <button onclick="abrir_cerrar_menu()" class="boton_menu" id="x"></button>
