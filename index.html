@@ -1,135 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página Responsive con Navbar</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body{
-            background-image: url(ciudad.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            height: 100vh;
-        }
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-        .barras{ display: none; }
-        .desplegable{ background: #1e1e1e; }
+    header.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
 
-        ul{
-            display: flex;
-            flex-direction: row;
-        }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
 
-        ul li{
-            padding: 10px;
-            list-style: none;
-        }
+    .logo img {
+      height: 40px;
+    }
 
-        ul li a{
-            color: cyan;
-            text-decoration: none;
-            text-align: center;
-            font-size: 1.1rem;
-        }
+    nav.nav-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-        nav ul li:hover{
-            background: #f57722;
-        }
-        @media (max-width: 850px){
-            .barras{
-                background-color: #1e1e1e;
-                display: block;
-            }
+    nav.nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
 
-            .desplegable{
-                background: none;
-                transform: translate(-100%);
-                transition: 0.5s;
-                font-size: 1.5rem;
-                width: 50%;
-            }
+    nav.nav-links a:hover {
+      background-color: #555;
+    }
 
-            ul{
-                display: flex;
-                flex-direction: column;
-                height: 160vh;
-            }
+    @media (max-width: 768px) {
+      header.navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-            a{
-                font-size: 1.5rem;
-                padding: 20px 0px 20px 20px;
-                display: block;
-                text-align: left;
-            }
+      nav.nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10px;
+      }
 
-            .boton_menu{
-                background-image: url('./icono_menu.png');
-                background-color: #1e1e1e;
-                background-repeat: no-repeat;
-                height: 30px;
-                width: 30px;
-                background-size: 30px 30px;
-                background-position: center;
-            }
-
-            button{
-                margin: 10px 10px 10px 20px;
-                border: none;
-            }
-
-            .abrir_menu{
-                background: rgba(30, 30, 30, 0.6);
-                backdrop-filter: blur(2px);
-                transform: translate(0%);
-                width: 50%;
-                transition: 0.5s;
-            }
-
-            .colocar_x{
-                background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/56/PolloCampero_Logo.png');
-                background-color: #1e1e1e;
-                background-repeat: no-repeat;
-                height: 30px;
-                width: 30px;
-                background-size: 30px 30px;
-                background-position: center;
-            }
-        }
-
-        @media (max-width: 500px){
-            .desplegable{
-                width: 100%;
-                height: 100vh;
-                font-size: 1.6rem;
-            }
-        }
-    </style>
+      nav.nav-links a {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-    <center>
-        <img src="Pollo.png" width="300" height="180">
-    </center>
-    <div class="barras">
-        <button onclick="abrir_cerrar_menu()" class="boton_menu" id="x"></button>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://via.placeholder.com/40" alt="Logo">
+      Mi Empresa
     </div>
-    <nav id="menu" class="desplegable">
-        <ul>
-            <li><a href="ace.html">Inicio</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="proyecto.html">Proyectos</a></li>
-            <li><a href="contac.html">Contáctanos</a></li>
-        </ul>
+    <nav class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#">Ordenar</a>
+      <a href="#">Contactos</a>
+      <a href="#">Empleos</a>
     </nav>
-</header>
-<script src="main.js"></script>
+  </header>
+
+  <main style="padding: 20px;">
+    <h1>Bienvenido</h1>
+    <p>Este sitio se adapta a cualquier dispositivo: teléfono, tablet o computadora.</p>
+  </main>
+
 </body>
 </html>
+
